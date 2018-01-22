@@ -21,6 +21,7 @@
 
 ```
 git clone https://github.com/MS-CSE-GCR/BirdClassification-Keras-Tensorflow-Inception.git
+cd BirdClassification-Keras-Tensorflow-Inception
 ```
 
 4) 下载数据集并解压
@@ -28,6 +29,13 @@ git clone https://github.com/MS-CSE-GCR/BirdClassification-Keras-Tensorflow-Ince
 ```
 wget http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz
 tar xvf CUB_200_2011.tgz
+```
+
+5) 分别运行示例代码
+```
+python dataprocess.py
+python train.py
+python test.py <URL of Image>
 ```
 
 ## 数据说明
