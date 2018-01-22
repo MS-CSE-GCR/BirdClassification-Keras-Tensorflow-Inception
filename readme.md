@@ -13,9 +13,22 @@
 1) 创建Azure 数据科学虚拟机
 在全球版Azure的管理门户上搜索Azure数据科学虚拟机(Data Science Virtual Machine)，开始创建。注意选择Ubuntu系统，HDD磁盘类型，NC6型号虚拟机。创建成功后，通过Putty连接虚拟机。
 
-3) 训练环境配置
+2) 训练环境配置
 配置Keras默认后台为Tensorflow。也可以在/home/<username>/.keras里面找到keras.json文件。
 如果使用Python环境运行代码，运行source activate py35，启动虚拟环境。
+
+3) 下载示例代码
+
+```
+git clone https://github.com/MS-CSE-GCR/BirdClassification-Keras-Tensorflow-Inception.git
+```
+
+4) 下载数据集并解压
+
+```
+wget http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz
+tar xvf CUB_200_2011.tgz
+```
 
 ## 数据说明
 数据是来自[Caltech-UCSD Birds-200-2011 (CUB-200-2011)](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html)，包含200种鸟类的图片，可以用于进行鸟的识别、部位检测和图像分割。[下载](http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz)
@@ -31,4 +44,3 @@
    - 选用50%数据训练时，训练集Accuracy约为96%，验证Accuracy约为70%
    - 所有数据集都作为训练集时，Accuracy约为91%
 - test.py: 基于训练好的模型进行网络图片测试。运行方式: python test.py "Internet img url"
-
